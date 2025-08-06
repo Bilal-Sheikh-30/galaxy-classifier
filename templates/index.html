@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy Classifier - Discover Your Galaxy Type</title>
+    <linkhref
+      ="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css')}}"
+    />
+  </head>
+  <body>
+    <!-- Background Carousel -->
+    <div class="background-carousel">
+      <div class="bg-slide active"></div>
+      <div class="bg-slide"></div>
+      <div class="bg-slide"></div>
+      <div class="bg-slide"></div>
+      <div class="bg-slide"></div>
+    </div>
+    <div class="bg-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Galaxy Classifier</h1>
+        <p class="tagline">
+          Upload a galaxy image and let AI classify it for you
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-secondary">See About</a>
+          <a href="#predictions" class="btn btn-primary">Make Predictions ✨</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About Galaxy Classifier</h2>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>🔭 Dataset</h3>
+            <p>
+              Built using the Galaxy10 dataset, which contains over 17,000
+              high-quality galaxy images classified into 10 distinct
+              morphological categories. Each image has been carefully curated
+              and labeled by astronomers to ensure accurate classification.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-number">17K+</span>
+                <span class="stat-label">Images</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">10</span>
+                <span class="stat-label">Classes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h3>🧠 Model Architecture</h3>
+            <p>
+              Powered by a fine-tuned ResNet-50 convolutional neural network,
+              achieving state-of-the-art accuracy in galaxy morphology
+              classification. The model has been optimized for real-world
+              astronomical data with advanced data augmentation techniques.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-tag">ResNet-50</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Transfer Learning</span>
+              <span class="tech-tag">Data Augmentation</span>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-number">86.3%</span>
+                <span class="stat-label">Accuracy</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">0.86</span>
+                <span class="stat-label">F1-Score</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h3>🚀 How It Works</h3>
+            <p>
+              Simply upload an image of a galaxy, and our AI model will analyze
+              its morphological features to classify it into one of 10
+              categories including disturbed, round smooth, barred spiral, and merger
+              galaxies. The classification happens in real-time with confidence
+              scores.
+            </p>
+          </div>
+
+          <div class="about-card galaxy-types-card">
+            <h3>🌌 Galaxy Types</h3>
+            <p>
+              Our model can identify 10 distinct galaxy morphological types.
+              Each image below represents one of the classes our AI has been
+              trained to recognize:
+            </p>
+
+            <div class="galaxy-grid">
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_0.png"
+                    alt="Galaxy Class 0"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Disturbed Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_1.png"
+                    alt="Galaxy Class 1"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Merging Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_2.png"
+                    alt="Galaxy Class 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Round Smooth Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_3.png"
+                    alt="Galaxy Class 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">In-between Round Smooth Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_4.png"
+                    alt="Galaxy Class 4"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Cigar Shaped Smooth Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_5.png"
+                    alt="Galaxy Class 5"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Barred Spiral Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_6.png"
+                    alt="Galaxy Class 6"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Unbarred Tight Spiral Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_7.png"
+                    alt="Galaxy Class 7"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Unbarred Loose Spiral Galaxies</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_8.png"
+                    alt="Galaxy Class 8"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Edge-on Galaxies without Bulge</div>
+              </div>
+
+              <div class="galaxy-item">
+                <div class="galaxy-image">
+                  <img
+                    src="../static/images/class_9.png"
+                    alt="Galaxy Class 9"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="galaxy-label">Edge-on Galaxies with Bulge</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Predictions Section -->
+    <section class="predictions" id="predictions">
+      <div class="predictions-content">
+        <h2>🔮 Make Predictions</h2>
+        <p class="predictions-intro">
+          Upload galaxy images and let our AI model classify them instantly. You
+          can upload multiple images at once for batch processing.
+        </p>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📁</div>
+            <h3>Drop your galaxy images here</h3>
+            <p>or <span class="upload-browse">click to browse</span></p>
+            <p class="upload-info">
+              Supports JPG, PNG • Multiple files allowed
+            </p>
+            <input
+              type="file"
+              id="imageInput"
+              multiple
+              accept="image/*"
+              hidden
+            />
+          </div>
+
+          <div class="uploaded-images" id="uploadedImages"></div>
+
+          <button class="btn btn-primary predict-btn" id="predictBtn" disabled>
+            <span class="btn-text">Predict Galaxy Types</span>
+            <div class="btn-loader" hidden></div>
+          </button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection" hidden>
+          <h3>🌌 Prediction Results</h3>
+          <div class="results-grid" id="resultsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="{{url_for('static', filename='script/main.js')}}"></script>
+  </body>
+</html>
