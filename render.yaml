@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: galaxy-classifier
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    autoDeploy: false
