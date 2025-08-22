@@ -1,8 +1,11 @@
 # Galaxy Image Classification using CNN and ResNet-50
 
-<div align="center">
-  [![Watch the demo](https://res.cloudinary.com/dacj8pmtm/video/upload/Galaxy_Classifier_Demo_ki2wis.mp4)
-</div>
+<p align="center">
+  <a href="https://player.cloudinary.com/embed/?cloud_name=dacj8pmtm&public_id=Galaxy_Classifier_Demo_ki2wis&profile=cld-default">
+    <img src="https://res.cloudinary.com/dacj8pmtm/video/upload/w_600,h_340,c_fill,so_0/Galaxy_Classifier_Demo_ki2wis.jpg" alt="Watch the demo"/>
+  </a>
+</p>
+
 
 ## 📋 Project Overview
 
@@ -113,4 +116,4 @@ The project demonstrates the importance of:
 
 Refer to the complete project report below.
 
-📊 **[Click here for the full project report](./Galaxy%20Image%20Classification%20report.pdf)**
+📊 **[Click here for the full project report](./report/Galaxy%20Image%20Classification%20report.pdf)**
