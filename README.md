@@ -1,15 +1,7 @@
 # Galaxy Image Classification using CNN and ResNet-50
 
 <div align="center">
-  <iframe 
-    src="https://player.cloudinary.com/embed/?cloud_name=dacj8pmtm&public_id=Galaxy_Classifier_Demo_ki2wis&profile=cld-default" 
-    width="800" 
-    height="450" 
-    style="height: 450px; width: 800px; aspect-ratio: 16 / 9;" 
-    allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
-    allowfullscreen 
-    frameborder="0">
-  </iframe>
+  [![Watch the demo](https://res.cloudinary.com/dacj8pmtm/video/upload/Galaxy_Classifier_Demo_ki2wis.mp4)
 </div>
 
 ## 📋 Project Overview
